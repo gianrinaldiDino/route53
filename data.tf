@@ -2,7 +2,7 @@ data "terraform_remote_state" "vpc" {
   backend = "s3"
   config = {
     region   = var.region
-    bucket   = "${var.bucket_tfstate}-${var.environment}"
-    key      = "${var.region}/${var.environment}/vpc.tfstate"
+    bucket   = "dinosandbox-prod-tf-states-us-east-1"
+    key      = "production/us-east-1/vpc/terraform.tfstate"
   }
 }
